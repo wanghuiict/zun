@@ -1089,7 +1089,7 @@ class DockerDriver(driver.ContainerDriver):
             os_type = info['OSType']
             os = info['OperatingSystem']
             kernel_version = info['KernelVersion']
-            labels = {}
+            labels = {"servername":"%s"%str(info['Name'])}
             slabels = info['Labels']
             if slabels:
                 for l in slabels:
